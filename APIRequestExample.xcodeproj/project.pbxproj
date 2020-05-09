@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,9 @@
 		6A02D5D624646624001E0C1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A02D5D424646624001E0C1E /* LaunchScreen.storyboard */; };
 		6A02D5DE246466B5001E0C1E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A02D5DD246466B5001E0C1E /* TableViewController.swift */; };
 		6A02D5E32464670F001E0C1E /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A02D5E22464670F001E0C1E /* LibraryTableViewCell.swift */; };
+		6A25A0482467019D000DBAA0 /* APIRequest in Frameworks */ = {isa = PBXBuildFile; productRef = 6A25A0472467019D000DBAA0 /* APIRequest */; };
+		6A25A04A24670200000DBAA0 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A25A04924670200000DBAA0 /* Root.swift */; };
+		6A25A04C2467023A000DBAA0 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A25A04B2467023A000DBAA0 /* Library.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,8 @@
 		6A02D5D724646624001E0C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A02D5DD246466B5001E0C1E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		6A02D5E22464670F001E0C1E /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
+		6A25A04924670200000DBAA0 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
+		6A25A04B2467023A000DBAA0 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A25A0482467019D000DBAA0 /* APIRequest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +74,8 @@
 		6A02D5DF246466DA001E0C1E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6A25A04924670200000DBAA0 /* Root.swift */,
+				6A25A04B2467023A000DBAA0 /* Library.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -104,6 +112,9 @@
 			dependencies = (
 			);
 			name = APIRequestExample;
+			packageProductDependencies = (
+				6A25A0472467019D000DBAA0 /* APIRequest */,
+			);
 			productName = APIRequestExample;
 			productReference = 6A02D5C624646622001E0C1E /* APIRequestExample.app */;
 			productType = "com.apple.product-type.application";
@@ -132,6 +143,9 @@
 				Base,
 			);
 			mainGroup = 6A02D5BD24646622001E0C1E;
+			packageReferences = (
+				6A25A0462467019D000DBAA0 /* XCRemoteSwiftPackageReference "APIRequest.swift" */,
+			);
 			productRefGroup = 6A02D5C724646622001E0C1E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -159,6 +173,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A02D5E32464670F001E0C1E /* LibraryTableViewCell.swift in Sources */,
+				6A25A04A24670200000DBAA0 /* Root.swift in Sources */,
+				6A25A04C2467023A000DBAA0 /* Library.swift in Sources */,
 				6A02D5CA24646622001E0C1E /* AppDelegate.swift in Sources */,
 				6A02D5DE246466B5001E0C1E /* TableViewController.swift in Sources */,
 			);
@@ -350,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6A25A0462467019D000DBAA0 /* XCRemoteSwiftPackageReference "APIRequest.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GroupeMINASTE/APIRequest.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6A25A0472467019D000DBAA0 /* APIRequest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A25A0462467019D000DBAA0 /* XCRemoteSwiftPackageReference "APIRequest.swift" */;
+			productName = APIRequest;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6A02D5BE24646622001E0C1E /* Project object */;
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import APIRequest
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,9 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Configure the API
+        APIConfiguration.current = APIConfiguration(host: "api.cdnjs.com")
+        
         // Create the view
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = TableViewController(style: .grouped)
+        window?.rootViewController = UINavigationController(rootViewController: TableViewController())
         window?.makeKeyAndVisible()
         
         // Return
